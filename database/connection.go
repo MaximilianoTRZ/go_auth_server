@@ -17,7 +17,7 @@ func Connect() (*gorm.DB, error) {
 	}
 
 	connection.Logger = logger.Default.LogMode(logger.Info)
-	log.Default().Println("Database connected")
+	log.Default().Println("Database connected ok!")
 
 
 	return connection, err	

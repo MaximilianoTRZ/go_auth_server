@@ -8,7 +8,16 @@ func Hello(c *fiber.Ctx) error {
 	return c.SendString("Hello, Go Auth Server!")
 }
 func Register(c *fiber.Ctx) error {
-	return c.SendString("Here will be the registration endpoint")
+
+	var data map[string]string
+
+	if err := c.BodyParser(&data); err != nil {
+		return err
+	}
+
+	
+
+	return c.JSON(data)
 }
 func Login(c *fiber.Ctx) error {
 	return c.SendString("Here will be the login endpoint")
