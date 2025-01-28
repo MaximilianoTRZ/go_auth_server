@@ -6,7 +6,10 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
-)		
+)
+
+// global variable to be used in other files
+var DB *gorm.DB
 
 func Connect() (*gorm.DB, error) {
 
@@ -15,6 +18,9 @@ func Connect() (*gorm.DB, error) {
 	if err != nil {
 			panic("failed to connect database")
 	}
+
+	// assign the connection to the global variable
+	DB = connection
 
 	connection.Logger = logger.Default.LogMode(logger.Info)
 	log.Default().Println("Database connected ok!")
