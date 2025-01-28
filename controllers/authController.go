@@ -14,7 +14,7 @@ import (
 const SECRET_KEY = "secret"
 
 func Hello(c *fiber.Ctx) error {
-	return c.SendString("Hello, Go Auth Server!")
+	return c.SendString("Go Auth Server is working!")
 }
 
 func Register(c *fiber.Ctx) error {
