@@ -25,8 +25,7 @@ func Connect() (*gorm.DB, error) {
 	connection.AutoMigrate(&models.User{})
 
 	connection.Logger = logger.Default.LogMode(logger.Info)
-	log.Default().Println("Database connected ok!")
+	log.Default().Println("------------------ Database connected ok! ------------------")
 
-
-	// return connection, err	
+	return connection, err	
 }

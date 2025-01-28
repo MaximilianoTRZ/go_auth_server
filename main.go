@@ -5,6 +5,7 @@ import (
 	"go_react_auth/routes"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
@@ -12,6 +13,8 @@ func main() {
     database.Connect()  
 
     app := fiber.New()
+
+    app.Use(cors.New(cors.Config{AllowOrigins: "*"}))
 
     routes.SetupRoutes(app)
 
