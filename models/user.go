@@ -6,7 +6,3 @@ type User struct {
 	Email    string `gorm:"unique" json:"email"`
 	Password []byte `json:"password"`
 }
-
-func (u *User) TableName() string {
-	return "users"
-}
