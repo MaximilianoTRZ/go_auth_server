@@ -1,6 +1,4 @@
-# React and Golang JWT Authentication
-
-https://youtu.be/d4Y2DkKbxM0?si=axM0D7aLAdvh9Dn8
+# Golang JWT Authentication Server
 
 ## To run the server and db:
 
