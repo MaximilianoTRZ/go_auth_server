@@ -9,6 +9,7 @@ docker-compose up --build
 ## Technologies
 
 - Go
+- Go Fiber
 - Postgres
 - Docker
 
